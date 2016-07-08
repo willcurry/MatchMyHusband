@@ -11,13 +11,13 @@ public class MatchMyHusbandTests {
     }
 
     @Test
-    public void womenCanSignUp() {
+    public void womanCanSignUp() {
         MatchMyHusband matchMyHusband = new MatchMyHusband();
-        assertThat(matchMyHusband.addWomen(100, "Nina"), is("100Nina"));
+        assertThat(matchMyHusband.addWoman(new Woman(100, "Nina")), is("100Nina"));
     }
 
     @Test
-    public void manCanSignUp() {
+    public void menCanSignUp() {
         MatchMyHusband matchMyHusband = new MatchMyHusband();
         assertThat(matchMyHusband.addMan(25, 25, 50, "Bill"), is("100Bill"));
     }
@@ -26,23 +26,21 @@ public class MatchMyHusbandTests {
     public void canFindMatch() {
         MatchMyHusband matchMyHusband = new MatchMyHusband();
         matchMyHusband.addMan(25, 25, 50, "Bill");
-        Women women = new Women(100, "Nina");
-        assertThat(matchMyHusband.findMatch(women), is("Your match is Bill"));
+        Woman woman = new Woman(100, "Nina");
+        assertThat(matchMyHusband.findMatch(woman), is("Your match is Bill"));
     }
 
     @Test
     public void cantFindMatch() {
         MatchMyHusband matchMyHusband = new MatchMyHusband();
         matchMyHusband.addMan(1, 1, 1, "Gary");
-        Women women = new Women(100, "Nina");
-        assertThat(matchMyHusband.findMatch(women), is("No match found!"));
-
+        Woman woman = new Woman(100, "Nina");
+        assertThat(matchMyHusband.findMatch(woman), is("No match found!"));
     }
 
     @Test
-    public void decreaseWomenNeed() {
-        MatchMyHusband matchMyHusband = new MatchMyHusband();
-        Women women = new Women(100, "Nina");
-        assertThat(matchMyHusband.reduceWomensNeed(women, 2), is(72));
+    public void decreaseWomanNeed() {
+        Woman woman = new Woman(100, "Nina");
+        assertThat(woman.reduceNeed(2), is(72));
     }
 }
