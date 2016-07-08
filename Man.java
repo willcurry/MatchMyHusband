@@ -1,9 +1,9 @@
 public class Man {
 
-    public int cooking;
-    public int cleaning;
-    public int childCare;
-    public String name;
+    private int cooking;
+    private int cleaning;
+    private int childCare;
+    private String name;
 
 
     public Man(int cooking, int cleaning, int childCare, String name) {

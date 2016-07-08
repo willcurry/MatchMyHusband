@@ -8,11 +8,11 @@ public class Women {
         setName(name);
     }
 
-    public void setNeed(int need) {
+    private void setNeed(int need) {
        this.need = need;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
@@ -22,5 +22,13 @@ public class Women {
 
     public String getName() {
         return this.name;
+    }
+
+    public int reduceWomensNeed(Women women, int months) {
+        for (int i=0; i < months; i++) {
+            int currentNeed = women.getNeed();
+            women.setNeed(currentNeed *= 0.85);
+        }
+        return women.getNeed();
     }
 }

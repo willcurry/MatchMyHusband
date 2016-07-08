@@ -41,8 +41,7 @@ public class MatchMyHusbandTests {
 
     @Test
     public void decreaseWomenNeed() {
-        MatchMyHusband matchMyHusband = new MatchMyHusband();
         Women women = new Women(100, "Nina");
-        assertThat(matchMyHusband.reduceWomensNeed(women, 2), is(72));
+        assertThat(women.reduceWomensNeed(women, 2), is(72));
     }
 }

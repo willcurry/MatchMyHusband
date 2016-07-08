@@ -28,12 +28,4 @@ public class MatchMyHusband {
         men.add(man);
         return man.getCooking() + man.getCleaning() + man.getChildCare() + man.getName();
     }
-
-    public int reduceWomensNeed(Women women, int months) {
-        for (int i=0; i < months; i++) {
-            int currentNeed = women.getNeed();
-            women.setNeed(currentNeed *= 0.85);
-        }
-        return women.getNeed();
-    }
 }
