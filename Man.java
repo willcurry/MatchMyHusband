@@ -1,47 +1,45 @@
 public class Man {
-
     public int cooking;
     public int cleaning;
     public int childCare;
     public String name;
 
-
     public Man(int cooking, int cleaning, int childCare, String name) {
-        setCooking(cooking);
-        setChildCare(childCare);
-        setCleaning(cleaning);
-        setName(name);
+        cooking(cooking);
+        childCare(childCare);
+        cleaning(cleaning);
+        manName(name);
     }
 
-    public void setChildCare(int childCare) {
+    private void childCare(int childCare) {
         this.childCare = childCare;
     }
 
-    public void setCleaning(int cleaning) {
+    private void cleaning(int cleaning) {
         this.cleaning = cleaning;
     }
 
-    public void setCooking(int cooking) {
+    private void cooking(int cooking) {
         this.cooking = cooking;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    private void name(String name) {
         this.name = name;
     }
 
-    public int getCooking() {
+    public String name() {
+        return name;
+    }
+
+    public int cooking() {
         return this.cooking;
     }
 
-    public int getCleaning() {
+    public int cleaning() {
         return this.cleaning;
     }
 
-    public int getChildCare() {
+    public int childCare() {
         return this.childCare;
     }
 }
