@@ -4,23 +4,23 @@ public class Women {
     private String name;
 
     public Women(int need, String name) {
-        womenSetNeed(need);
-        womenSetName(name);
+        setNeed(need);
+        setName(name);
     }
 
-    public void womenSetNeed(int need) {
+    public void setNeed(int need) {
        this.need = need;
     }
 
-    public void womenSetName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int womenGetNeed() {
+    public int getNeed() {
         return this.need;
     }
 
-    public String womenGetName() {
+    public String getName() {
         return this.name;
     }
 }

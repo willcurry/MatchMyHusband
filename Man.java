@@ -10,7 +10,7 @@ public class Man {
         setCooking(cooking);
         setChildCare(childCare);
         setCleaning(cleaning);
-        manSetName(name);
+        setName(name);
     }
 
     public void setChildCare(int childCare) {
@@ -25,11 +25,11 @@ public class Man {
         this.cooking = cooking;
     }
 
-    public String manGetName() {
+    public String getName() {
         return name;
     }
 
-    public void manSetName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
